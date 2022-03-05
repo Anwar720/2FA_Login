@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Two-Factor-Authentication</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login auth">
+            <h2>Please Enter your Two-factor authentication code </h2>
+            
+            <ul>
+                <input type="tel" pattern="[0-9]" maxlength="1" class="digits" placeholder="*" required>
+                <input type="tel" pattern="[0-9]" maxlength="1" class="digits" placeholder="*" required>
+                <input type="tel" pattern="[0-9]" maxlength="1" class="digits" placeholder="*" required>
+                <input type="tel" pattern="[0-9]" maxlength="1" class="digits" placeholder="*" required>
+                <input type="tel" pattern="[0-9]" maxlength="1" class="digits" placeholder="*" required>
+                <input type="tel" pattern="[0-9]" maxlength="1" class="digits" placeholder="*" required>
+            
+            </ul>
+            <p class="error"></p>
+            <button  id="auth_submit">Submit</button>
+            
+        
+        </div>
+        
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>
