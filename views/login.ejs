@@ -10,17 +10,21 @@
 </head>
 <body>
     <div class="container">
-        <form action="/" method="post" class='login'>
+        <form action="/login" method="post" class='login'>
             <h1>Login </h1>
             <section class="usr-input">
             <section><i class="fa fa-user"></i></i><input type="email" name="email" id="email"  placeholder="Email" required></section>
             <section><i class="fa fa-lock"></i><input type="password" name="password" id="password" placeholder="Password" required></section>
+            <span class="error">
+                <% if(error) {%>
+                <h4>Incorrect Email or Password!</h4>
+                <%} %>
+            </span>
             <a href="/register">Create an account</a>
             </section>
-            
             <input type="submit" class="submit">
         </form>
     </div>
-    <script  src="js/scripts.js"></script>
+    <!-- <script  src="js/scripts.js"></script> -->
 </body>
 </html>

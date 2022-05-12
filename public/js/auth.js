@@ -15,3 +15,13 @@ digit.forEach( (item,idx)=>{
   item.style.borderBottom = '2px solid green';
 }
 });
+
+// paste event when entering the 2fa code
+digit[0].addEventListener('paste',(event)=>{
+  let paste = (event.clipboardData || window.clipboardData).getData('text');
+  for(let i = 1;i<paste.length && i < digit.length;i++){
+    //this.nextSibling.innerText = parseInt(digit[i]);
+    digit[i].value = parseInt(paste[i]);
+  }
+})
+digit.addEventListener('')

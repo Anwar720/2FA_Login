@@ -9,18 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <form class="setUp_auth" method = 'post' action="/verify-setup">
+        <form class="setUp_auth" method = 'get' action="/">
             <h2>Set up with an Authenticator </h2>
             <ol>
                 <li>Download an Authenticator app</li>
                 <li>Scan the QRcode to pair with Authenticator</li>
                 <img src="<%=qrcode%>">
                 <p>Cant scan QRcode? Pair using Key: </p>
-                <h3><%= secret %></h3>
-                <li>Enter varification code:</li>
-                <input type="text" placeholder="code">
+                <h3 ><%= secret %></h3>
+                <input type="hidden" name="secret" value=<%= secret %> style="display:none" ></input>
+                <!-- <li>Enter varification code:</li> -->
+                <!-- /<input type="text" placeholder="code"> -->
             </ol>
-            <input type="submit" value="Verify code">
+            <input type="submit" value="Continue to Login">
         </form>
     </div>
 </body>

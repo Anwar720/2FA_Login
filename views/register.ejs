@@ -12,6 +12,9 @@
     <div class="container">
         <form id="register" method="post" action="/register">
             <h2>Create an account</h2>
+            <% if(error){ %>
+                <h4 class="error">Please Enter a different Email</h4>
+            <% } %>
             <section><i class="fa fa-user"></i></i><input type="email" name="email" id="email"  placeholder="Email" required></section>
             <section><i class="fa fa-lock"></i><input type="password" name="password" id="password" placeholder="Password" required></section>
             <section><i class="fa fa-lock"></i><input type="password" id="verify-password" placeholder="Verify Password" required></section>
