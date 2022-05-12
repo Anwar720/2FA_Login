@@ -132,8 +132,8 @@ app.post('/register',checkNotAuthenticated,(req,res)=>{
             });
 
             mysqlConnection.query(
-            `INSERT INTO users (user_email, user_password, user_secret_token) VALUES ( ${mysqlConnection.escape(
-            req.body.email)}, ${mysqlConnection.escape(hash)},"${secret.base32}")`,
+            `INSERT INTO users (user_email, user_password, user_secret_token) VALUES ( "${mysqlConnection.escape(
+            req.body.email)}", ${mysqlConnection.escape(hash)},"${secret.base32}")`,
             (err, result) => { 
                 if (err){
                     console.log(err.message);
